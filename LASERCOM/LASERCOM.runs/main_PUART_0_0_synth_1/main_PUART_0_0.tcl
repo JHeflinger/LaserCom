@@ -33,6 +33,7 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.2 [current_project]
 set_property ip_repo_paths {
   /home/jason/Dev/LaserCom/DAC
+  /home/jason/Dev/LaserCom/ADCCLK
   /home/jason/Dev/LaserCom/PUART
 } [current_project]
 update_ip_catalog

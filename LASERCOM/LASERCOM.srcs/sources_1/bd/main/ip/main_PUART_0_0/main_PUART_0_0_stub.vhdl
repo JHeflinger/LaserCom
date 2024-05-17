@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Thu May 16 21:29:00 2024
+-- Date        : Thu May 16 22:46:49 2024
 -- Host        : JasonArch running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_PUART_0_0/main_PUART_0_0_stub.vhdl

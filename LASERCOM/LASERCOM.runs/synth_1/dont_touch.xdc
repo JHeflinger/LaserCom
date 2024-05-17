@@ -33,6 +33,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_DAC_0_0 ||
 # IP: bd/main/ip/main_PUART_0_0/main_PUART_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_PUART_0_0 || ORIG_REF_NAME==main_PUART_0_0} -quiet] -quiet
 
+# IP: bd/main/ip/main_ADCCLK_0_0/main_ADCCLK_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_ADCCLK_0_0 || ORIG_REF_NAME==main_ADCCLK_0_0} -quiet] -quiet
+
 # IP: bd/main/ip/main_auto_pc_0/main_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_auto_pc_0 || ORIG_REF_NAME==main_auto_pc_0} -quiet] -quiet
 

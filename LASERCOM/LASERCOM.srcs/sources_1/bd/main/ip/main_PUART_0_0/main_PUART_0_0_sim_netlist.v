@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Thu May 16 21:29:00 2024
+// Date        : Thu May 16 22:46:49 2024
 // Host        : JasonArch running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_PUART_0_0/main_PUART_0_0_sim_netlist.v
@@ -617,18 +617,18 @@ module main_PUART_0_0_PUART
     \tx_out[1]_i_10 
        (.I0(clockcount_reg[9]),
         .I1(clockcount_reg[8]),
-        .I2(clockcount_reg[4]),
-        .I3(clockcount_reg[6]),
+        .I2(clockcount_reg[3]),
+        .I3(clockcount_reg[4]),
         .I4(clockcount_reg[7]),
         .O(\tx_out[1]_i_10_n_0 ));
   LUT5 #(
-    .INIT(32'h80000000)) 
+    .INIT(32'h10000000)) 
     \tx_out[1]_i_11 
-       (.I0(clockcount_reg[0]),
-        .I1(clockcount_reg[1]),
-        .I2(clockcount_reg[2]),
-        .I3(clockcount_reg[5]),
-        .I4(clockcount_reg[3]),
+       (.I0(clockcount_reg[1]),
+        .I1(clockcount_reg[0]),
+        .I2(clockcount_reg[6]),
+        .I3(clockcount_reg[2]),
+        .I4(clockcount_reg[5]),
         .O(\tx_out[1]_i_11_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 

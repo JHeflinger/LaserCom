@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Thu May 16 21:28:17 2024
+//Date        : Thu May 16 22:46:21 2024
 //Host        : JasonArch running 64-bit Arch Linux
 //Command     : generate_target main.bd
 //Design      : main
@@ -405,9 +405,10 @@ module m02_couplers_imp_1CGZ2R8
   assign m02_couplers_to_m02_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "main,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=9,numNonXlnxBlks=2,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "main.hwdef" *) 
+(* CORE_GENERATION_INFO = "main,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=15,numReposBlks=10,numNonXlnxBlks=3,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "main.hwdef" *) 
 module main
-   (DAC,
+   (ADC_CLK,
+    DAC,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -429,6 +430,7 @@ module main
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb);
+  output ADC_CLK;
   output [5:0]DAC;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
@@ -452,6 +454,7 @@ module main
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
 
+  wire ADCCLK_0_outclk;
   wire [5:0]DAC_0_out;
   wire PUART_0_tx_full;
   wire [1:0]PUART_0_tx_out;
@@ -571,7 +574,11 @@ module main
   wire [0:0]ps7_0_axi_periph_M02_AXI_WVALID;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
 
+  assign ADC_CLK = ADCCLK_0_outclk;
   assign DAC[5:0] = DAC_0_out;
+  main_ADCCLK_0_0 ADCCLK_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .outclk(ADCCLK_0_outclk));
   main_DAC_0_0 DAC_0
        (.enable(PUART_0_tx_full),
         .in(PUART_0_tx_out),

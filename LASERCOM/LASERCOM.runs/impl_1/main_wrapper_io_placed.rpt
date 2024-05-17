@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date                      : Thu May 16 21:33:29 2024
+| Date                      : Thu May 16 22:47:50 2024
 | Host                      : JasonArch running 64-bit Arch Linux
 | Command                   : report_io -file main_wrapper_io_placed.rpt
 | Design                    : main_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           136 |
+|           137 |
 +---------------+
 
 
@@ -400,7 +400,7 @@ Table of Contents
 | W3         | DDR_dq[29]        |            | PS_DDR_DQ29_502         | INOUT       | SSTL135_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
 | W4         | DDR_dqs_n[3]      |            | PS_DDR_DQS_N3_502       | INOUT       | DIFF_SSTL135_T_DCI |         |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
 | W5         | DDR_dqs_p[3]      |            | PS_DDR_DQS_P3_502       | INOUT       | DIFF_SSTL135_T_DCI |         |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
-| W6         |                   | High Range | IO_L22N_T3_13           | User IO     |                    |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| W6         | ADC_CLK           | High Range | IO_L22N_T3_13           | OUTPUT      | LVCMOS33           |      13 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W7         |                   | High Range | VCCO_13                 | VCCO        |                    |      13 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | W8         | DAC[4]            | High Range | IO_L15N_T2_DQS_13       | OUTPUT      | LVCMOS33           |      13 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W9         |                   | High Range | IO_L16N_T2_13           | User IO     |                    |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Thu May 16 21:33:51 2024
+| Date             : Thu May 16 22:48:12 2024
 | Host             : JasonArch running 64-bit Arch Linux
 | Command          : report_power -file main_wrapper_power_routed.rpt -pb main_wrapper_power_summary_routed.pb -rpx main_wrapper_power_routed.rpx
 | Design           : main_wrapper
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |     2083 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      645 |     53200 |            1.21 |
-|   Register              |    <0.001 |      948 |    106400 |            0.89 |
-|   CARRY4                |    <0.001 |       23 |     13300 |            0.17 |
+| Slice Logic             |    <0.001 |     2119 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      651 |     53200 |            1.22 |
+|   Register              |    <0.001 |      969 |    106400 |            0.91 |
+|   CARRY4                |    <0.001 |       28 |     13300 |            0.21 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   Others                |     0.000 |      219 |       --- |             --- |
+|   Others                |     0.000 |      221 |       --- |             --- |
 |   F7/F8 Muxes           |     0.000 |        2 |     53200 |           <0.01 |
-| Signals                 |    <0.001 |     1527 |       --- |             --- |
-| I/O                     |    <0.001 |        6 |       125 |            4.80 |
+| Signals                 |    <0.001 |     1558 |       --- |             --- |
+| I/O                     |    <0.001 |        7 |       125 |            5.60 |
 | PS7                     |     1.399 |        1 |       --- |             --- |
 | Static Power            |     0.141 |          |           |                 |
 | Total                   |     1.543 |          |           |                 |

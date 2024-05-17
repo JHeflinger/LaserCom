@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 16 21:28:32 2024" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 16 22:46:22 2024" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.2" DEVICE="7z020" NAME="main" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -7,6 +7,36 @@
     <PORT DIR="O" LEFT="5" NAME="DAC" RIGHT="0" SIGIS="undef" SIGNAME="DAC_0_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="DAC_0" PORT="out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -84,34 +114,9 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DQS"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
+    <PORT DIR="O" NAME="ADC_CLK" SIGIS="undef" SIGNAME="ADCCLK_0_outclk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
+        <CONNECTION INSTANCE="ADCCLK_0" PORT="outclk"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -164,6 +169,27 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
+    <MODULE COREREVISION="2" FULLNAME="/ADCCLK_0" HWVERSION="1.0" INSTANCE="ADCCLK_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADCCLK" VLNV="user.org:user:ADCCLK:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="WAIT" VALUE="0x00001"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_ADCCLK_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="outclk" SIGIS="undef" SIGNAME="ADCCLK_0_outclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ADC_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="2" FULLNAME="/DAC_0" HWVERSION="1.0" INSTANCE="DAC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DAC" VLNV="user.org:user:DAC:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -192,7 +218,7 @@
     <MODULE COREREVISION="2" FULLNAME="/PUART_0" HWVERSION="1.0" INSTANCE="PUART_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PUART" VLNV="user.org:user:PUART:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="WAIT" VALUE="0x0002F"/>
+        <PARAMETER NAME="WAIT" VALUE="0x00064"/>
         <PARAMETER NAME="Component_Name" VALUE="main_PUART_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -2452,6 +2478,7 @@
             <CONNECTION INSTANCE="TX_DATA_IO" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ACLK"/>
             <CONNECTION INSTANCE="PUART_0" PORT="clk"/>
+            <CONNECTION INSTANCE="ADCCLK_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -3075,180 +3102,6 @@
             <CONNECTION INSTANCE="rst_ps7_0_50M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_M_AXI_GP0_AWID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWID"/>
@@ -3439,6 +3292,93 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RREADY"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="TX_SEND_IO_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_SEND_IO" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_DATA_IO_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="TX_DATA_IO" PORT="s_axi_awaddr"/>
@@ -3524,6 +3464,93 @@
         <PORT DIR="O" LEFT="0" NAME="M02_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="TX_DATA_IO_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="TX_DATA_IO" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="TX_FULL_IO_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TX_FULL_IO" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

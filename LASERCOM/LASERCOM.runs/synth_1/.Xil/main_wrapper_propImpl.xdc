@@ -11,3 +11,5 @@ set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN Y7 [get_ports {DAC[2]}]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V6 [get_ports {DAC[0]}]
+set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W6 [get_ports ADC_CLK]

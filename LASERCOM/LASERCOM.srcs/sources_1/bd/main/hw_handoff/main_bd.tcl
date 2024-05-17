@@ -160,13 +160,23 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
+  set ADC_CLK [ create_bd_port -dir O ADC_CLK ]
   set DAC [ create_bd_port -dir O -from 5 -to 0 DAC ]
+
+  # Create instance: ADCCLK_0, and set properties
+  set ADCCLK_0 [ create_bd_cell -type ip -vlnv user.org:user:ADCCLK:1.0 ADCCLK_0 ]
+  set_property -dict [ list \
+   CONFIG.WAIT {0x00001} \
+ ] $ADCCLK_0
 
   # Create instance: DAC_0, and set properties
   set DAC_0 [ create_bd_cell -type ip -vlnv user.org:user:DAC:1.0 DAC_0 ]
 
   # Create instance: PUART_0, and set properties
   set PUART_0 [ create_bd_cell -type ip -vlnv user.org:user:PUART:1.0 PUART_0 ]
+  set_property -dict [ list \
+   CONFIG.WAIT {0x00064} \
+ ] $PUART_0
 
   # Create instance: TX_DATA_IO, and set properties
   set TX_DATA_IO [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 TX_DATA_IO ]
@@ -682,12 +692,13 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins TX_DATA_IO/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
 
   # Create port connections
+  connect_bd_net -net ADCCLK_0_outclk [get_bd_ports ADC_CLK] [get_bd_pins ADCCLK_0/outclk]
   connect_bd_net -net DAC_0_out [get_bd_ports DAC] [get_bd_pins DAC_0/out]
   connect_bd_net -net PUART_0_tx_full [get_bd_pins DAC_0/enable] [get_bd_pins PUART_0/tx_full] [get_bd_pins TX_FULL_IO/gpio_io_i]
   connect_bd_net -net PUART_0_tx_out [get_bd_pins DAC_0/in] [get_bd_pins PUART_0/tx_out]
   connect_bd_net -net TX_DATA_IO_gpio_io_o [get_bd_pins PUART_0/tx_data] [get_bd_pins TX_DATA_IO/gpio_io_o]
   connect_bd_net -net TX_SEND_IO_gpio_io_o [get_bd_pins PUART_0/tx_send] [get_bd_pins TX_SEND_IO/gpio_io_o]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins PUART_0/clk] [get_bd_pins TX_DATA_IO/s_axi_aclk] [get_bd_pins TX_FULL_IO/s_axi_aclk] [get_bd_pins TX_SEND_IO/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins ADCCLK_0/clk] [get_bd_pins PUART_0/clk] [get_bd_pins TX_DATA_IO/s_axi_aclk] [get_bd_pins TX_FULL_IO/s_axi_aclk] [get_bd_pins TX_SEND_IO/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins PUART_0/rst] [get_bd_pins TX_DATA_IO/s_axi_aresetn] [get_bd_pins TX_FULL_IO/s_axi_aresetn] [get_bd_pins TX_SEND_IO/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 

@@ -126,7 +126,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f8f4069b</spirit:value>
+            <spirit:value>9:fd7bc57c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -142,11 +142,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 17 01:28:32 UTC 2024</spirit:value>
+            <spirit:value>Fri May 17 02:46:22 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f8f4069b</spirit:value>
+            <spirit:value>9:fd7bc57c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -165,7 +165,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16b7c6bc</spirit:value>
+            <spirit:value>9:72ce8051</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -181,11 +181,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 17 01:28:32 UTC 2024</spirit:value>
+            <spirit:value>Fri May 17 02:46:22 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16b7c6bc</spirit:value>
+            <spirit:value>9:72ce8051</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -199,11 +199,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 17 01:29:00 UTC 2024</spirit:value>
+            <spirit:value>Fri May 17 02:46:49 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f8f4069b</spirit:value>
+            <spirit:value>9:fd7bc57c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -300,7 +300,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>WAIT</spirit:name>
         <spirit:displayName>Wait</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WAIT" spirit:bitStringLength="20">0x0002F</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WAIT" spirit:bitStringLength="20">0x00064</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -377,7 +377,7 @@
     <spirit:parameter>
       <spirit:name>WAIT</spirit:name>
       <spirit:displayName>Wait</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WAIT" spirit:bitStringLength="20">0x0002F</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WAIT" spirit:bitStringLength="20">0x00064</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -400,6 +400,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.POLARITY" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WAIT" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
