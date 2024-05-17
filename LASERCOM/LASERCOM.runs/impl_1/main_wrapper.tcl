@@ -74,6 +74,7 @@ set rc [catch {
   set_property parent.project_path /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.xpr [current_project]
   set_property ip_repo_paths {
   /home/jason/Dev/LaserCom/DAC
+  /home/jason/Dev/LaserCom/PUFART
   /home/jason/Dev/LaserCom/ADCCLK
   /home/jason/Dev/LaserCom/PUART
 } [current_project]

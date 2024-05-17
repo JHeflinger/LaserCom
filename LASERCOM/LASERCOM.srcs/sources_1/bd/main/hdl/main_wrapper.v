@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Thu May 16 22:46:21 2024
+//Date        : Fri May 17 01:22:05 2024
 //Host        : JasonArch running 64-bit Arch Linux
 //Command     : generate_target main_wrapper.bd
 //Design      : main_wrapper
@@ -12,6 +12,7 @@
 module main_wrapper
    (ADC_CLK,
     DAC,
+    DATA_IN,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -35,6 +36,7 @@ module main_wrapper
     FIXED_IO_ps_srstb);
   output ADC_CLK;
   output [5:0]DAC;
+  input [5:0]DATA_IN;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -59,6 +61,7 @@ module main_wrapper
 
   wire ADC_CLK;
   wire [5:0]DAC;
+  wire [5:0]DATA_IN;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -84,6 +87,7 @@ module main_wrapper
   main main_i
        (.ADC_CLK(ADC_CLK),
         .DAC(DAC),
+        .DATA_IN(DATA_IN),
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),

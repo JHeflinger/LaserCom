@@ -1,4 +1,4 @@
-22:57:46 **** Build of configuration Debug for project lasercom ****
+00:37:29 **** Auto Build of configuration Debug for project lasercom ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -15,9 +15,9 @@ Finished building target: lasercom.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size lasercom.elf  |tee "lasercom.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  23532	   1200	  22632	  47364	   b904	lasercom.elf
+  23788	   1248	  22680	  47716	   ba64	lasercom.elf
 Finished building: lasercom.elf.size
  
 
-22:57:46 Build Finished (took 417ms)
+00:37:31 Build Finished (took 1s.292ms)
 

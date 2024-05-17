@@ -221,7 +221,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 3
+#define XPAR_XGPIO_NUM_INSTANCES 6
 
 /* Definitions for peripheral TX_DATA_IO */
 #define XPAR_TX_DATA_IO_BASEADDR 0x41220000
@@ -247,6 +247,30 @@
 #define XPAR_TX_SEND_IO_IS_DUAL 0
 
 
+/* Definitions for peripheral PUFART_OUT */
+#define XPAR_PUFART_OUT_BASEADDR 0x41250000
+#define XPAR_PUFART_OUT_HIGHADDR 0x4125FFFF
+#define XPAR_PUFART_OUT_DEVICE_ID 3
+#define XPAR_PUFART_OUT_INTERRUPT_PRESENT 0
+#define XPAR_PUFART_OUT_IS_DUAL 0
+
+
+/* Definitions for peripheral PUFART_READ */
+#define XPAR_PUFART_READ_BASEADDR 0x41230000
+#define XPAR_PUFART_READ_HIGHADDR 0x4123FFFF
+#define XPAR_PUFART_READ_DEVICE_ID 4
+#define XPAR_PUFART_READ_INTERRUPT_PRESENT 0
+#define XPAR_PUFART_READ_IS_DUAL 0
+
+
+/* Definitions for peripheral PUFART_READY */
+#define XPAR_PUFART_READY_BASEADDR 0x41240000
+#define XPAR_PUFART_READY_HIGHADDR 0x4124FFFF
+#define XPAR_PUFART_READY_DEVICE_ID 5
+#define XPAR_PUFART_READY_INTERRUPT_PRESENT 0
+#define XPAR_PUFART_READY_IS_DUAL 0
+
+
 /******************************************************************/
 
 /* Canonical definitions for peripheral TX_DATA_IO */
@@ -269,6 +293,27 @@
 #define XPAR_GPIO_2_DEVICE_ID XPAR_TX_SEND_IO_DEVICE_ID
 #define XPAR_GPIO_2_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_2_IS_DUAL 0
+
+/* Canonical definitions for peripheral PUFART_OUT */
+#define XPAR_GPIO_3_BASEADDR 0x41250000
+#define XPAR_GPIO_3_HIGHADDR 0x4125FFFF
+#define XPAR_GPIO_3_DEVICE_ID XPAR_PUFART_OUT_DEVICE_ID
+#define XPAR_GPIO_3_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_3_IS_DUAL 0
+
+/* Canonical definitions for peripheral PUFART_READ */
+#define XPAR_GPIO_4_BASEADDR 0x41230000
+#define XPAR_GPIO_4_HIGHADDR 0x4123FFFF
+#define XPAR_GPIO_4_DEVICE_ID XPAR_PUFART_READ_DEVICE_ID
+#define XPAR_GPIO_4_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_4_IS_DUAL 0
+
+/* Canonical definitions for peripheral PUFART_READY */
+#define XPAR_GPIO_5_BASEADDR 0x41240000
+#define XPAR_GPIO_5_HIGHADDR 0x4124FFFF
+#define XPAR_GPIO_5_DEVICE_ID XPAR_PUFART_READY_DEVICE_ID
+#define XPAR_GPIO_5_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_5_IS_DUAL 0
 
 
 /******************************************************************/

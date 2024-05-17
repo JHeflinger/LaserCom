@@ -32,6 +32,7 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.2 [current_project]
 set_property ip_repo_paths {
   /home/jason/Dev/LaserCom/DAC
+  /home/jason/Dev/LaserCom/PUFART
   /home/jason/Dev/LaserCom/ADCCLK
   /home/jason/Dev/LaserCom/PUART
 } [current_project]
@@ -54,6 +55,15 @@ set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserC
 set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_rst_ps7_0_50M_0/main_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_rst_ps7_0_50M_0/main_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_rst_ps7_0_50M_0/main_rst_ps7_0_50M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_3/main_axi_gpio_0_3_board.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_3/main_axi_gpio_0_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_3/main_axi_gpio_0_3.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_4/main_axi_gpio_0_4_board.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_4/main_axi_gpio_0_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_4/main_axi_gpio_0_4.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_5/main_axi_gpio_0_5_board.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_5/main_axi_gpio_0_5_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_axi_gpio_0_5/main_axi_gpio_0_5.xdc]
 set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/ip/main_auto_pc_0/main_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/main/main_ooc.xdc]
 

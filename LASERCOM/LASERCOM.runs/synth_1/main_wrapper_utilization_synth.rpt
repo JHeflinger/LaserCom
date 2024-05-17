@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu May 16 22:47:16 2024
+| Date         : Fri May 17 01:23:23 2024
 | Host         : JasonArch running 64-bit Arch Linux
 | Command      : report_utilization -file main_wrapper_utilization_synth.rpt -pb main_wrapper_utilization_synth.pb
 | Design       : main_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    7 |     0 |       125 |  5.60 |
+| Bonded IOB                  |   13 |     0 |       125 | 10.40 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -147,6 +147,7 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |    7 |                  IO |
+| IBUF     |    6 |                  IO |
 +----------+------+---------------------+
 
 
@@ -159,10 +160,14 @@ Table of Contents
 | main_xbar_0                 |    1 |
 | main_rst_ps7_0_50M_0        |    1 |
 | main_processing_system7_0_0 |    1 |
+| main_axi_gpio_0_5           |    1 |
+| main_axi_gpio_0_4           |    1 |
+| main_axi_gpio_0_3           |    1 |
 | main_axi_gpio_0_2           |    1 |
 | main_axi_gpio_0_1           |    1 |
 | main_axi_gpio_0_0           |    1 |
 | main_auto_pc_0              |    1 |
+| main_PUFART_0_0             |    1 |
 | main_PUART_0_0              |    1 |
 | main_DAC_0_0                |    1 |
 | main_ADCCLK_0_0             |    1 |

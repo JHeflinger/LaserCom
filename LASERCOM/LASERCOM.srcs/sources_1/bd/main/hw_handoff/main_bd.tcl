@@ -162,6 +162,7 @@ proc create_root_design { parentCell } {
   # Create ports
   set ADC_CLK [ create_bd_port -dir O ADC_CLK ]
   set DAC [ create_bd_port -dir O -from 5 -to 0 DAC ]
+  set DATA_IN [ create_bd_port -dir I -from 5 -to 0 DATA_IN ]
 
   # Create instance: ADCCLK_0, and set properties
   set ADCCLK_0 [ create_bd_cell -type ip -vlnv user.org:user:ADCCLK:1.0 ADCCLK_0 ]
@@ -177,6 +178,36 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.WAIT {0x00064} \
  ] $PUART_0
+
+  # Create instance: PUFART_0, and set properties
+  set PUFART_0 [ create_bd_cell -type ip -vlnv user.org:user:PUFART:1.0 PUFART_0 ]
+  set_property -dict [ list \
+   CONFIG.THRESHOLD_0 {"000110"} \
+   CONFIG.THRESHOLD_1 {"001010"} \
+   CONFIG.THRESHOLD_2 {"010110"} \
+   CONFIG.THRESHOLD_3 {"100110"} \
+   CONFIG.THRESHOLD_4 {"110010"} \
+ ] $PUFART_0
+
+  # Create instance: PUFART_OUT, and set properties
+  set PUFART_OUT [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 PUFART_OUT ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS {1} \
+ ] $PUFART_OUT
+
+  # Create instance: PUFART_READ, and set properties
+  set PUFART_READ [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 PUFART_READ ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_GPIO_WIDTH {1} \
+ ] $PUFART_READ
+
+  # Create instance: PUFART_READY, and set properties
+  set PUFART_READY [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 PUFART_READY ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS {1} \
+   CONFIG.C_GPIO_WIDTH {1} \
+ ] $PUFART_READY
 
   # Create instance: TX_DATA_IO, and set properties
   set TX_DATA_IO [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 TX_DATA_IO ]
@@ -677,7 +708,7 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {3} \
+   CONFIG.NUM_MI {6} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_50M, and set properties
@@ -690,19 +721,28 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins TX_SEND_IO/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins TX_FULL_IO/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins TX_DATA_IO/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins PUFART_READ/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins PUFART_READY/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M05_AXI [get_bd_intf_pins PUFART_OUT/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M05_AXI]
 
   # Create port connections
   connect_bd_net -net ADCCLK_0_outclk [get_bd_ports ADC_CLK] [get_bd_pins ADCCLK_0/outclk]
   connect_bd_net -net DAC_0_out [get_bd_ports DAC] [get_bd_pins DAC_0/out]
   connect_bd_net -net PUART_0_tx_full [get_bd_pins DAC_0/enable] [get_bd_pins PUART_0/tx_full] [get_bd_pins TX_FULL_IO/gpio_io_i]
   connect_bd_net -net PUART_0_tx_out [get_bd_pins DAC_0/in] [get_bd_pins PUART_0/tx_out]
+  connect_bd_net -net PUFART_0_ready [get_bd_pins PUFART_0/ready] [get_bd_pins PUFART_OUT/gpio_io_i] [get_bd_pins PUFART_READY/gpio_io_i]
+  connect_bd_net -net PUFART_READ_gpio_io_o [get_bd_pins PUFART_0/read] [get_bd_pins PUFART_READ/gpio_io_o]
   connect_bd_net -net TX_DATA_IO_gpio_io_o [get_bd_pins PUART_0/tx_data] [get_bd_pins TX_DATA_IO/gpio_io_o]
   connect_bd_net -net TX_SEND_IO_gpio_io_o [get_bd_pins PUART_0/tx_send] [get_bd_pins TX_SEND_IO/gpio_io_o]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins ADCCLK_0/clk] [get_bd_pins PUART_0/clk] [get_bd_pins TX_DATA_IO/s_axi_aclk] [get_bd_pins TX_FULL_IO/s_axi_aclk] [get_bd_pins TX_SEND_IO/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net data_0_1 [get_bd_ports DATA_IN] [get_bd_pins PUFART_0/data]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins ADCCLK_0/clk] [get_bd_pins PUART_0/clk] [get_bd_pins PUFART_0/clk] [get_bd_pins PUFART_OUT/s_axi_aclk] [get_bd_pins PUFART_READ/s_axi_aclk] [get_bd_pins PUFART_READY/s_axi_aclk] [get_bd_pins TX_DATA_IO/s_axi_aclk] [get_bd_pins TX_FULL_IO/s_axi_aclk] [get_bd_pins TX_SEND_IO/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins PUART_0/rst] [get_bd_pins TX_DATA_IO/s_axi_aresetn] [get_bd_pins TX_FULL_IO/s_axi_aresetn] [get_bd_pins TX_SEND_IO/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins PUART_0/rst] [get_bd_pins PUFART_0/rst] [get_bd_pins PUFART_OUT/s_axi_aresetn] [get_bd_pins PUFART_READ/s_axi_aresetn] [get_bd_pins PUFART_READY/s_axi_aresetn] [get_bd_pins TX_DATA_IO/s_axi_aresetn] [get_bd_pins TX_FULL_IO/s_axi_aresetn] [get_bd_pins TX_SEND_IO/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 
   # Create address segments
+  create_bd_addr_seg -range 0x00010000 -offset 0x41250000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PUFART_OUT/S_AXI/Reg] SEG_PUFART_OUT_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x41240000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PUFART_READY/S_AXI/Reg] SEG_PUFART_READY_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x41230000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PUFART_READ/S_AXI/Reg] SEG_PUFART_READ_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs TX_SEND_IO/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41210000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs TX_FULL_IO/S_AXI/Reg] SEG_axi_gpio_1_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41220000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs TX_DATA_IO/S_AXI/Reg] SEG_axi_gpio_2_Reg

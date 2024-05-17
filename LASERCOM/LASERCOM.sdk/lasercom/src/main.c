@@ -7,7 +7,21 @@
 #define DATADIRECTION_IN 0xffffffff
 #define DATADIRECTION_OUT 0x00000000
 
-XGpio tx_full, tx_send, tx_data;
+XGpio tx_full, tx_send, tx_data, pf_read, pf_ready, pf_data;
+
+void send_packet(u32 data) {
+	while(XGpio_DiscreteRead(&tx_full, DATACHANNEL) == 1) {};
+	XGpio_DiscreteWrite(&tx_data, DATACHANNEL, data);
+	XGpio_DiscreteWrite(&tx_send, DATACHANNEL, 1);
+	XGpio_DiscreteWrite(&tx_send, DATACHANNEL, 0);
+}
+
+void get_packet(u32* data) {
+	while(XGpio_DiscreteRead(&pf_ready, DATACHANNEL) == 0) {};
+	*data = XGpio_DiscreteRead(&pf_data, DATACHANNEL);
+	XGpio_DiscreteWrite(&pf_read, DATACHANNEL, 1);
+	XGpio_DiscreteWrite(&pf_read, DATACHANNEL, 0);
+}
 
 int init(void) {
 	PRINT("-- Initializing --\r\n");
@@ -21,6 +35,15 @@ int init(void) {
 	XGpio_Initialize(&tx_send, XPAR_TX_SEND_IO_DEVICE_ID);
 	XGpio_SetDataDirection(&tx_send, DATACHANNEL, DATADIRECTION_OUT);
 
+	XGpio_Initialize(&pf_read, XPAR_PUFART_READ_DEVICE_ID);
+	XGpio_SetDataDirection(&pf_read, DATACHANNEL, DATADIRECTION_OUT);
+
+	XGpio_Initialize(&pf_ready, XPAR_PUFART_READY_DEVICE_ID);
+	XGpio_SetDataDirection(&pf_ready, DATACHANNEL, DATADIRECTION_IN);
+
+	XGpio_Initialize(&pf_data, XPAR_PUFART_OUT_DEVICE_ID);
+	XGpio_SetDataDirection(&pf_data, DATACHANNEL, DATADIRECTION_IN);
+
 	PRINT("-- Finished initialization -- \r\n");
 	return 0;
 }
@@ -31,10 +54,7 @@ void loop(void) {
 		u32 data = count == 0 ? 0x424F4F42 : 0xF0F0F0F0;
 		count++;
 		if (count > 1) count = 0;
-		while(XGpio_DiscreteRead(&tx_full, DATACHANNEL) == 1) {};
-		XGpio_DiscreteWrite(&tx_data, DATACHANNEL, data);
-		XGpio_DiscreteWrite(&tx_send, DATACHANNEL, 1);
-		XGpio_DiscreteWrite(&tx_send, DATACHANNEL, 0);
+		send_packet(data);
 	}
 }
 
