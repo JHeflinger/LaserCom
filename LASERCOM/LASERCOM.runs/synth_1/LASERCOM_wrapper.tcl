@@ -63,6 +63,9 @@ set_property used_in_implementation false [get_files -all /home/jason/Dev/LaserC
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/constrs_1/new/lasercom_constraints.xdc
+set_property used_in_implementation false [get_files /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/constrs_1/new/lasercom_constraints.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

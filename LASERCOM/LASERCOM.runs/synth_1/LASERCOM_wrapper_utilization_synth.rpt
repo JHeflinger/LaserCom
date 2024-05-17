@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu May 16 20:25:00 2024
+| Date         : Thu May 16 20:28:00 2024
 | Host         : JasonArch running 64-bit Arch Linux
 | Command      : report_utilization -file LASERCOM_wrapper_utilization_synth.rpt -pb LASERCOM_wrapper_utilization_synth.pb
 | Design       : LASERCOM_wrapper

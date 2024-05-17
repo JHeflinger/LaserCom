@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu May 16 20:24:34 2024
-# Process ID: 176999
+# Start of session at: Thu May 16 20:27:23 2024
+# Process ID: 178035
 # Current directory: /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1
 # Command line: vivado -log LASERCOM_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LASERCOM_wrapper.tcl
 # Log file: /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/LASERCOM_wrapper.vds
@@ -19,24 +19,24 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 177041 
+INFO: Helper process launched with PID 178083 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1364.238 ; gain = 12.023 ; free physical = 4538 ; free virtual = 5769
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1364.238 ; gain = 22.023 ; free physical = 2007 ; free virtual = 4903
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'LASERCOM_wrapper' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/hdl/LASERCOM_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'LASERCOM' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:13]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_DAC_0_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_DAC_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_DAC_0_0' (1#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_DAC_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_PUART_0_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_PUART_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_PUART_0_0' (2#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_PUART_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_axi_gpio_1_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_axi_gpio_1_0' (3#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_axi_gpio_2_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_axi_gpio_2_0' (4#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_axi_gpio_0_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_axi_gpio_0_0' (5#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_processing_system7_0_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_processing_system7_0_0' (6#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_DAC_0_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_DAC_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_DAC_0_0' (1#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_DAC_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_PUART_0_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_PUART_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_PUART_0_0' (2#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_PUART_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_axi_gpio_1_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_axi_gpio_1_0' (3#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_axi_gpio_2_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_axi_gpio_2_0' (4#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_axi_gpio_0_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_axi_gpio_0_0' (5#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_processing_system7_0_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_processing_system7_0_0' (6#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'LASERCOM_processing_system7_0_0' requires 65 connections, but only 63 given [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:253]
 INFO: [Synth 8-6157] synthesizing module 'LASERCOM_ps7_0_axi_periph_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:426]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QPRWWX' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:1099]
@@ -46,15 +46,15 @@ INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_13PH7R4' (8#1) [
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_S6ZRHE' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:1363]
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_S6ZRHE' (9#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:1363]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_16KXWRN' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:1495]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_auto_pc_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_auto_pc_0' (10#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_auto_pc_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_auto_pc_0' (10#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_16KXWRN' (11#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:1495]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_xbar_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_xbar_0' (12#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_xbar_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_xbar_0' (12#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_xbar_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'xbar' of module 'LASERCOM_xbar_0' requires 40 connections, but only 38 given [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:1058]
 INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_ps7_0_axi_periph_0' (13#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:426]
-INFO: [Synth 8-6157] synthesizing module 'LASERCOM_rst_ps7_0_50M_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_rst_ps7_0_50M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_rst_ps7_0_50M_0' (14#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-176999-JasonArch/realtime/LASERCOM_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LASERCOM_rst_ps7_0_50M_0' [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_rst_ps7_0_50M_0' (14#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/.Xil/Vivado-178035-JasonArch/realtime/LASERCOM_rst_ps7_0_50M_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'LASERCOM_rst_ps7_0_50M_0' requires 10 connections, but only 6 given [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:417]
 INFO: [Synth 8-6155] done synthesizing module 'LASERCOM' (15#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/synth/LASERCOM.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'LASERCOM_wrapper' (16#1) [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/hdl/LASERCOM_wrapper.v:12]
@@ -81,7 +81,7 @@ WARNING: [Synth 8-3331] design LASERCOM_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design LASERCOM_ps7_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design LASERCOM_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1409.988 ; gain = 57.773 ; free physical = 4488 ; free virtual = 5720
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1409.988 ; gain = 67.773 ; free physical = 1675 ; free virtual = 4892
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -94,10 +94,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1409.988 ; gain = 57.773 ; free physical = 4493 ; free virtual = 5724
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1409.988 ; gain = 67.773 ; free physical = 1301 ; free virtual = 4884
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1409.988 ; gain = 57.773 ; free physical = 4493 ; free virtual = 5724
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1409.988 ; gain = 67.773 ; free physical = 1297 ; free virtual = 4883
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -122,25 +122,30 @@ Parsing XDC File [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/L
 Finished Parsing XDC File [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/ip/LASERCOM_DAC_0_0/LASERCOM_DAC_0_0/LASERCOM_DAC_0_0_in_context.xdc] for cell 'LASERCOM_i/DAC_0'
 Parsing XDC File [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/ip/LASERCOM_auto_pc_0/LASERCOM_auto_pc_0/LASERCOM_auto_pc_0_in_context.xdc] for cell 'LASERCOM_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/sources_1/bd/LASERCOM/ip/LASERCOM_auto_pc_0/LASERCOM_auto_pc_0/LASERCOM_auto_pc_0_in_context.xdc] for cell 'LASERCOM_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/constrs_1/new/lasercom_constraints.xdc]
+Finished Parsing XDC File [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/constrs_1/new/lasercom_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.srcs/constrs_1/new/lasercom_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LASERCOM_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/LASERCOM_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/dont_touch.xdc]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1735.051 ; gain = 0.000 ; free physical = 1329 ; free virtual = 4648
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1730.027 ; gain = 0.000 ; free physical = 4239 ; free virtual = 5470
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1735.051 ; gain = 0.000 ; free physical = 1326 ; free virtual = 4648
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1730.027 ; gain = 0.000 ; free physical = 4239 ; free virtual = 5470
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1730.027 ; gain = 0.000 ; free physical = 4239 ; free virtual = 5470
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1735.051 ; gain = 0.000 ; free physical = 1320 ; free virtual = 4649
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1735.051 ; gain = 0.000 ; free physical = 1318 ; free virtual = 4649
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4340 ; free virtual = 5571
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1814 ; free virtual = 4608
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4340 ; free virtual = 5571
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1837 ; free virtual = 4605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -417,10 +422,10 @@ Applied set_property DONT_TOUCH = true for LASERCOM_i/PUART_0. (constraint file 
 Applied set_property DONT_TOUCH = true for LASERCOM_i/DAC_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for LASERCOM_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4343 ; free virtual = 5575
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1150 ; free virtual = 4635
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4343 ; free virtual = 5575
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 972 ; free virtual = 4619
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -464,7 +469,7 @@ WARNING: [Synth 8-3331] design LASERCOM_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design LASERCOM_ps7_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design LASERCOM_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4342 ; free virtual = 5575
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1780 ; free virtual = 4662
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -478,13 +483,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'LASERCOM_i/processing_system7_0/FCLK_CLK0' to pin 'LASERCOM_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4240 ; free virtual = 5473
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 747 ; free virtual = 4568
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4240 ; free virtual = 5473
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 707 ; free virtual = 4556
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -496,7 +501,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4232 ; free virtual = 5465
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 631 ; free virtual = 4590
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -520,7 +525,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4207 ; free virtual = 5440
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1150 ; free virtual = 4607
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -533,7 +538,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4207 ; free virtual = 5440
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1143 ; free virtual = 4603
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -545,25 +550,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4207 ; free virtual = 5440
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1130 ; free virtual = 4604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4207 ; free virtual = 5440
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1126 ; free virtual = 4607
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4207 ; free virtual = 5440
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1118 ; free virtual = 4605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4207 ; free virtual = 5440
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1109 ; free virtual = 4606
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -610,25 +615,25 @@ Report Instance Areas:
 |4     |      s00_couplers   |s00_couplers_imp_16KXWRN    |   177|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4207 ; free virtual = 5440
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 1102 ; free virtual = 4603
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1730.027 ; gain = 57.773 ; free physical = 4207 ; free virtual = 5440
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1730.027 ; gain = 377.812 ; free physical = 4207 ; free virtual = 5440
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1735.051 ; gain = 67.773 ; free physical = 974 ; free virtual = 4667
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 970 ; free virtual = 4667
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1732.027 ; gain = 0.000 ; free physical = 4199 ; free virtual = 5433
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1735.051 ; gain = 0.000 ; free physical = 800 ; free virtual = 4615
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1732.027 ; gain = 379.812 ; free physical = 4201 ; free virtual = 5435
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1732.027 ; gain = 0.000 ; free physical = 4201 ; free virtual = 5435
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1735.051 ; gain = 392.836 ; free physical = 726 ; free virtual = 4627
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1735.051 ; gain = 0.000 ; free physical = 726 ; free virtual = 4627
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.runs/synth_1/LASERCOM_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LASERCOM_wrapper_utilization_synth.rpt -pb LASERCOM_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu May 16 20:25:00 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu May 16 20:28:00 2024...

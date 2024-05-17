@@ -1,0 +1,6 @@
+20:32:54 INFO  : Registering command handlers for SDK TCF services
+20:32:55 INFO  : Launching XSCT server: xsct -n -interactive /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.sdk/temp_xsdb_launch_script.tcl
+20:32:58 INFO  : XSCT server has started successfully.
+20:32:58 INFO  : Successfully done setting XSCT server connection channel  
+20:32:58 INFO  : Successfully done setting SDK workspace  
+20:32:58 INFO  : Processing command line option -hwspec /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.sdk/LASERCOM_wrapper.hdf.
