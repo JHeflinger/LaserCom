@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:PUFART:1.0
-// IP Revision: 2
+// IP Revision: 12
 
 (* X_CORE_INFO = "PUFART,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "main_PUFART_0_0,PUFART,{}" *)

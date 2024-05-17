@@ -75,7 +75,7 @@ input wire [31 : 0] tx_data;
 input wire tx_send;
 
   PUART #(
-    .WAIT(20'H0002F)
+    .WAIT(20'H00064)
   ) inst (
     .tx_out(tx_out),
     .tx_full(tx_full),

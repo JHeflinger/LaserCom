@@ -120,6 +120,16 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../LASERCOM.srcs/sources_1/bd
 "../../../bd/main/sim/main.v" \
 "../../../bd/main/ipshared/cb86/PUART.v" \
 "../../../bd/main/ip/main_PUART_0_0/sim/main_PUART_0_0.v" \
+"../../../bd/main/ipshared/7c6d/ADCCLK.v" \
+"../../../bd/main/ip/main_ADCCLK_0_0/sim/main_ADCCLK_0_0.v" \
+"../../../bd/main/ipshared/e97a/PUFART.v" \
+"../../../bd/main/ip/main_PUFART_0_0/sim/main_PUFART_0_0.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/main/ip/main_axi_gpio_0_3/sim/main_axi_gpio_0_3.vhd" \
+"../../../bd/main/ip/main_axi_gpio_0_4/sim/main_axi_gpio_0_4.vhd" \
+"../../../bd/main/ip/main_axi_gpio_0_5/sim/main_axi_gpio_0_5.vhd" \
+"../../../bd/main/ip/main_axi_gpio_0_6/sim/main_axi_gpio_0_6.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_18  -v2k5 "+incdir+../../../../LASERCOM.srcs/sources_1/bd/main/ipshared/ec67/hdl" "+incdir+../../../../LASERCOM.srcs/sources_1/bd/main/ipshared/70cf/hdl" "+incdir+../../../../LASERCOM.srcs/sources_1/bd/main/ip/main_processing_system7_0_0" "+incdir+/home/jason/Temp/530/Install/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../LASERCOM.srcs/sources_1/bd/main/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

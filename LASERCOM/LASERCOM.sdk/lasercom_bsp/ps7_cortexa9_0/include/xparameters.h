@@ -221,7 +221,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 6
+#define XPAR_XGPIO_NUM_INSTANCES 7
 
 /* Definitions for peripheral TX_DATA_IO */
 #define XPAR_TX_DATA_IO_BASEADDR 0x41220000
@@ -271,6 +271,14 @@
 #define XPAR_PUFART_READY_IS_DUAL 0
 
 
+/* Definitions for peripheral TEST_IN */
+#define XPAR_TEST_IN_BASEADDR 0x41260000
+#define XPAR_TEST_IN_HIGHADDR 0x4126FFFF
+#define XPAR_TEST_IN_DEVICE_ID 6
+#define XPAR_TEST_IN_INTERRUPT_PRESENT 0
+#define XPAR_TEST_IN_IS_DUAL 0
+
+
 /******************************************************************/
 
 /* Canonical definitions for peripheral TX_DATA_IO */
@@ -314,6 +322,13 @@
 #define XPAR_GPIO_5_DEVICE_ID XPAR_PUFART_READY_DEVICE_ID
 #define XPAR_GPIO_5_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_5_IS_DUAL 0
+
+/* Canonical definitions for peripheral TEST_IN */
+#define XPAR_GPIO_6_BASEADDR 0x41260000
+#define XPAR_GPIO_6_HIGHADDR 0x4126FFFF
+#define XPAR_GPIO_6_DEVICE_ID XPAR_TEST_IN_DEVICE_ID
+#define XPAR_GPIO_6_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_6_IS_DUAL 0
 
 
 /******************************************************************/

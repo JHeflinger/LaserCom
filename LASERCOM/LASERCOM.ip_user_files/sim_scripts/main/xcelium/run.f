@@ -81,6 +81,16 @@
   "../../../bd/main/sim/main.v" \
   "../../../bd/main/ipshared/cb86/PUART.v" \
   "../../../bd/main/ip/main_PUART_0_0/sim/main_PUART_0_0.v" \
+  "../../../bd/main/ipshared/7c6d/ADCCLK.v" \
+  "../../../bd/main/ip/main_ADCCLK_0_0/sim/main_ADCCLK_0_0.v" \
+  "../../../bd/main/ipshared/e97a/PUFART.v" \
+  "../../../bd/main/ip/main_PUFART_0_0/sim/main_PUFART_0_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/main/ip/main_axi_gpio_0_3/sim/main_axi_gpio_0_3.vhd" \
+  "../../../bd/main/ip/main_axi_gpio_0_4/sim/main_axi_gpio_0_4.vhd" \
+  "../../../bd/main/ip/main_axi_gpio_0_5/sim/main_axi_gpio_0_5.vhd" \
+  "../../../bd/main/ip/main_axi_gpio_0_6/sim/main_axi_gpio_0_6.vhd" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_18 \
   "../../../../LASERCOM.srcs/sources_1/bd/main/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

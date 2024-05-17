@@ -16,19 +16,8 @@ reg [19:0] clockcount;
 reg [31:0] datacount;
 reg [31:0] interbuffer;
 reg [1:0] inter;
-reg [31:0] mask;
 
-always @(posedge clk) begin
-    if (rst == 1'b0) begin
-        buffer <= 32'b0;
-        interbuffer <= 32'b0;
-        in_progress <= 1'b0;
-        clockcount <= 20'b0;
-        start_sample <= 1'b0;
-        datacount <= 32'b0;
-        ready <= 1'b0;
-    end
-    
+always @(posedge clk) begin    
     if (read == 1'b1) begin
         ready <= 1'b0;
     end
@@ -54,22 +43,22 @@ always @(posedge clk) begin
                 clockcount <= 20'b0;
                 if (data >= THRESHOLD_4) begin
                     inter <= 2'd3;
-                end else if (data >= THRESHOLD_3) begin
+                end else if (data >= THRESHOLD_3 && data < THRESHOLD_4) begin
                     inter <= 2'd2;
-                end else if (data >= THRESHOLD_2) begin
+                end else if (data >= THRESHOLD_2 && data < THRESHOLD_3) begin
                     inter <= 2'd1;
-                end else if (data >= THRESHOLD_1) begin
+                end else if (data >= THRESHOLD_1 && data < THRESHOLD_2) begin
                     inter <= 2'd0;
+                end else begin
+                    inter <= 2'd3;
                 end
-                mask <= {30'b0, inter};
-                mask <= mask << (30 - datacount);
-                interbuffer <= interbuffer | mask;
+                interbuffer[datacount] = inter[0];
+                interbuffer[datacount + 1] = inter[1];
                 datacount <= datacount + 2;
             end
         end
         if (datacount >= 32'd31) begin
             buffer <= interbuffer;
-            interbuffer <= 32'b0;
             datacount <= 32'b0;
             in_progress <= 1'b0;
             clockcount <= 20'b0;

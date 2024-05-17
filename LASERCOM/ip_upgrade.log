@@ -1,6 +1,153 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri May 17 03:58:04 2024
+| Host         : JasonArch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_PUFART_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_PUFART_0_0 (user.org:user:PUFART:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri May 17 03:38:36 2024
+| Host         : JasonArch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_PUFART_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_PUFART_0_0 (user.org:user:PUFART:1.0) from (Rev. 9) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri May 17 03:24:22 2024
+| Host         : JasonArch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_PUFART_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_PUFART_0_0 (user.org:user:PUFART:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri May 17 03:12:38 2024
+| Host         : JasonArch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_PUFART_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_PUFART_0_0 (user.org:user:PUFART:1.0) from (Rev. 6) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri May 17 02:56:10 2024
+| Host         : JasonArch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_PUFART_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_PUFART_0_0 (user.org:user:PUFART:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri May 17 02:14:57 2024
+| Host         : JasonArch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_PUFART_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_PUFART_0_0 (user.org:user:PUFART:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri May 17 01:55:58 2024
+| Host         : JasonArch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_PUFART_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_PUFART_0_0 (user.org:user:PUFART:1.0) from (Rev. 2) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
 | Date         : Thu May 16 21:21:41 2024
 | Host         : JasonArch running 64-bit Arch Linux
 | Command      : upgrade_ip
