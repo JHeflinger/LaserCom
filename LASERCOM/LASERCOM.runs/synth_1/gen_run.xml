@@ -1,64 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1715905642">
-  <File Type="VDS-TIMING-PB" Name="LASERCOM_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="LASERCOM_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="LASERCOM_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="LASERCOM_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="LASERCOM_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="LASERCOM_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="LASERCOM_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="LASERCOM_wrapper_reports.tcl"/>
-  <File Type="PA-TCL" Name="LASERCOM_wrapper.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1715909547">
+  <File Type="VDS-TIMING-PB" Name="main_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="main_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="main_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="main_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="main_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="main_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="main_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="main_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="main_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/LASERCOM/LASERCOM.bd">
+    <File Path="$PSRCDIR/sources_1/bd/main/main.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/LASERCOM/hdl/LASERCOM_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/main/hdl/main_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/PUART.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/DAC.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/DAC.srcs/component.xml">
-      <FileInfo SFType="IPXACT"/>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="LASERCOM_wrapper"/>
+      <Option Name="TopModule" Val="main_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/lasercom_constraints.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/lasercom_constraints.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraints.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -69,16 +50,17 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_DAC_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_PUART_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_rst_ps7_0_50M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_axi_gpio_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LASERCOM_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_PUART_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_DAC_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_processing_system7_0_0"/>
 </GenRun>

@@ -1,0 +1,16 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu May 16 21:21:41 2024
+| Host         : JasonArch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_PUART_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of main_PUART_0_0 (user.org:user:PUART:1.0) from (Rev. 2) to (Rev. 3)
+

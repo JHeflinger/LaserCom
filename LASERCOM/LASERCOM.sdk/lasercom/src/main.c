@@ -26,8 +26,11 @@ int init(void) {
 }
 
 void loop(void) {
+	int count = 0;
 	while(1) {
-		u32 data = 0x424F4F42;
+		u32 data = count == 0 ? 0x424F4F42 : 0xF0F0F0F0;
+		count++;
+		if (count > 1) count = 0;
 		while(XGpio_DiscreteRead(&tx_full, DATACHANNEL) == 1) {};
 		XGpio_DiscreteWrite(&tx_data, DATACHANNEL, data);
 		XGpio_DiscreteWrite(&tx_send, DATACHANNEL, 1);

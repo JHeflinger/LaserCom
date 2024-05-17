@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log LASERCOM_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source LASERCOM_wrapper.tcl -notrace
+vivado -log main_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source main_wrapper.tcl -notrace

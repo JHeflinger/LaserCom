@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log LASERCOM_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source LASERCOM_wrapper.tcl
+EAStep vivado -log main_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_wrapper.tcl

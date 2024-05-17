@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log LASERCOM_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source LASERCOM_wrapper.tcl -notrace" );
+         "-log main_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source main_wrapper.tcl -notrace" );
 
 
 

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="39" Path="/home/jason/Dev/LaserCom/LASERCOM/LASERCOM.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="61308c9c24cc4f1aa5ecc87278fcc22d"/>
+    <Option Name="Id" Val="c2fb5f5067e64a0989a878e5d89a9a51"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -21,8 +21,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/DAC.srcs"/>
-    <Option Name="IPRepoPath" Val="$PSRCDIR/sources_1/new"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../DAC"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../PUART"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -62,81 +62,59 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/LASERCOM/LASERCOM.bd">
+      <File Path="$PSRCDIR/sources_1/bd/main/main.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_auto_pc_0/LASERCOM_auto_pc_0.xci">
-          <Proxy FileSetName="LASERCOM_auto_pc_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_axi_gpio_0_0/main_axi_gpio_0_0.xci">
+          <Proxy FileSetName="main_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_DAC_0_0/LASERCOM_DAC_0_0.xci">
-          <Proxy FileSetName="LASERCOM_DAC_0_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_rst_ps7_0_50M_0/main_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="main_rst_ps7_0_50M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_axi_gpio_1_0/LASERCOM_axi_gpio_1_0.xci">
-          <Proxy FileSetName="LASERCOM_axi_gpio_1_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_DAC_0_0/main_DAC_0_0.xci">
+          <Proxy FileSetName="main_DAC_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_axi_gpio_0_0/LASERCOM_axi_gpio_0_0.xci">
-          <Proxy FileSetName="LASERCOM_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_axi_gpio_0_1/main_axi_gpio_0_1.xci">
+          <Proxy FileSetName="main_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_processing_system7_0_0/LASERCOM_processing_system7_0_0.xci">
-          <Proxy FileSetName="LASERCOM_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_processing_system7_0_0/main_processing_system7_0_0.xci">
+          <Proxy FileSetName="main_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_PUART_0_0/LASERCOM_PUART_0_0.xci">
-          <Proxy FileSetName="LASERCOM_PUART_0_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_PUART_0_0/main_PUART_0_0.xci">
+          <Proxy FileSetName="main_PUART_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_xbar_0/LASERCOM_xbar_0.xci">
-          <Proxy FileSetName="LASERCOM_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_xbar_0/main_xbar_0.xci">
+          <Proxy FileSetName="main_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_rst_ps7_0_50M_0/LASERCOM_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="LASERCOM_rst_ps7_0_50M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LASERCOM.bd" FileRelPathName="ip/LASERCOM_axi_gpio_2_0/LASERCOM_axi_gpio_2_0.xci">
-          <Proxy FileSetName="LASERCOM_axi_gpio_2_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_axi_gpio_0_2/main_axi_gpio_0_2.xci">
+          <Proxy FileSetName="main_axi_gpio_0_2"/>
         </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/LASERCOM/hdl/LASERCOM_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/bd/main/hdl/main_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/PUART.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/DAC.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/DAC.srcs/component.xml">
-        <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="LASERCOM_wrapper"/>
+        <Option Name="TopModule" Val="main_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/new/lasercom_constraints.xdc">
+      <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/lasercom_constraints.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraints.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -144,7 +122,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="LASERCOM_wrapper"/>
+        <Option Name="TopModule" Val="main_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
@@ -158,57 +136,51 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="LASERCOM_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_processing_system7_0_0">
+    <FileSet Name="main_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_processing_system7_0_0">
       <Config>
-        <Option Name="TopModule" Val="LASERCOM_processing_system7_0_0"/>
+        <Option Name="TopModule" Val="main_processing_system7_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="LASERCOM_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_axi_gpio_0_0">
+    <FileSet Name="main_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_axi_gpio_0_0">
       <Config>
-        <Option Name="TopModule" Val="LASERCOM_axi_gpio_0_0"/>
+        <Option Name="TopModule" Val="main_axi_gpio_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="LASERCOM_axi_gpio_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_axi_gpio_1_0">
+    <FileSet Name="main_axi_gpio_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_axi_gpio_0_1">
       <Config>
-        <Option Name="TopModule" Val="LASERCOM_axi_gpio_1_0"/>
+        <Option Name="TopModule" Val="main_axi_gpio_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="LASERCOM_axi_gpio_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_axi_gpio_2_0">
+    <FileSet Name="main_axi_gpio_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_axi_gpio_0_2">
       <Config>
-        <Option Name="TopModule" Val="LASERCOM_axi_gpio_2_0"/>
+        <Option Name="TopModule" Val="main_axi_gpio_0_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="LASERCOM_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_xbar_0">
+    <FileSet Name="main_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_xbar_0">
       <Config>
-        <Option Name="TopModule" Val="LASERCOM_xbar_0"/>
+        <Option Name="TopModule" Val="main_xbar_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="LASERCOM_rst_ps7_0_50M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_rst_ps7_0_50M_0">
+    <FileSet Name="main_rst_ps7_0_50M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_rst_ps7_0_50M_0">
       <Config>
-        <Option Name="TopModule" Val="LASERCOM_rst_ps7_0_50M_0"/>
+        <Option Name="TopModule" Val="main_rst_ps7_0_50M_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="LASERCOM_PUART_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_PUART_0_0">
+    <FileSet Name="main_DAC_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_DAC_0_0">
       <Config>
-        <Option Name="TopModule" Val="LASERCOM_PUART_0_0"/>
+        <Option Name="TopModule" Val="main_DAC_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="LASERCOM_DAC_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_DAC_0_0">
+    <FileSet Name="main_PUART_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_PUART_0_0">
       <Config>
-        <Option Name="TopModule" Val="LASERCOM_DAC_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="LASERCOM_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LASERCOM_auto_pc_0">
-      <Config>
-        <Option Name="TopModule" Val="LASERCOM_auto_pc_0"/>
+        <Option Name="TopModule" Val="main_PUART_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -240,14 +212,16 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_processing_system7_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="main_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="main_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="main_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -256,7 +230,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_axi_gpio_0_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_axi_gpio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_axi_gpio_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="main_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="main_axi_gpio_0_0" Part="xc7z020clg400-1" ConstrsSet="main_axi_gpio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_axi_gpio_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -265,7 +239,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_axi_gpio_1_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_axi_gpio_1_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_axi_gpio_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_axi_gpio_1_0_synth_1" IncludeInArchive="true">
+    <Run Id="main_axi_gpio_0_1_synth_1" Type="Ft3:Synth" SrcSet="main_axi_gpio_0_1" Part="xc7z020clg400-1" ConstrsSet="main_axi_gpio_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_axi_gpio_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -274,7 +248,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_axi_gpio_2_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_axi_gpio_2_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_axi_gpio_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_axi_gpio_2_0_synth_1" IncludeInArchive="true">
+    <Run Id="main_axi_gpio_0_2_synth_1" Type="Ft3:Synth" SrcSet="main_axi_gpio_0_2" Part="xc7z020clg400-1" ConstrsSet="main_axi_gpio_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_axi_gpio_0_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -283,7 +257,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_xbar_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_xbar_0_synth_1" IncludeInArchive="true">
+    <Run Id="main_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="main_xbar_0" Part="xc7z020clg400-1" ConstrsSet="main_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_xbar_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -292,7 +266,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_rst_ps7_0_50M_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_rst_ps7_0_50M_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_rst_ps7_0_50M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_rst_ps7_0_50M_0_synth_1" IncludeInArchive="true">
+    <Run Id="main_rst_ps7_0_50M_0_synth_1" Type="Ft3:Synth" SrcSet="main_rst_ps7_0_50M_0" Part="xc7z020clg400-1" ConstrsSet="main_rst_ps7_0_50M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_rst_ps7_0_50M_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -301,7 +275,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_PUART_0_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_PUART_0_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_PUART_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_PUART_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="main_DAC_0_0_synth_1" Type="Ft3:Synth" SrcSet="main_DAC_0_0" Part="xc7z020clg400-1" ConstrsSet="main_DAC_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_DAC_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -310,18 +284,11 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_DAC_0_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_DAC_0_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_DAC_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_DAC_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="main_PUART_0_0_synth_1" Type="Ft3:Synth" SrcSet="main_PUART_0_0" Part="xc7z020clg400-1" ConstrsSet="main_PUART_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_PUART_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="LASERCOM_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="LASERCOM_auto_pc_0" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/LASERCOM_auto_pc_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -330,7 +297,9 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -345,7 +314,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="main_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -361,7 +330,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_axi_gpio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_axi_gpio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="main_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_axi_gpio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_axi_gpio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -377,7 +346,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_axi_gpio_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_axi_gpio_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_axi_gpio_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="main_axi_gpio_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_axi_gpio_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_axi_gpio_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -393,7 +362,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_axi_gpio_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_axi_gpio_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_axi_gpio_2_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="main_axi_gpio_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_axi_gpio_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_axi_gpio_0_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -409,7 +378,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="main_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -425,7 +394,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_rst_ps7_0_50M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_rst_ps7_0_50M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_rst_ps7_0_50M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="main_rst_ps7_0_50M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_rst_ps7_0_50M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_rst_ps7_0_50M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -441,7 +410,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_PUART_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_PUART_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_PUART_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="main_DAC_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_DAC_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_DAC_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -457,25 +426,11 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="LASERCOM_DAC_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_DAC_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_DAC_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="main_PUART_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_PUART_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_PUART_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="LASERCOM_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="LASERCOM_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="LASERCOM_auto_pc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
