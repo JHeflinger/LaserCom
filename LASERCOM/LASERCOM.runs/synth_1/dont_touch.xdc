@@ -36,9 +36,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_PUART_0_0 
 # IP: bd/main/ip/main_ADCCLK_0_0/main_ADCCLK_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_ADCCLK_0_0 || ORIG_REF_NAME==main_ADCCLK_0_0} -quiet] -quiet
 
-# IP: bd/main/ip/main_PUFART_0_0/main_PUFART_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_PUFART_0_0 || ORIG_REF_NAME==main_PUFART_0_0} -quiet] -quiet
-
 # IP: bd/main/ip/main_axi_gpio_0_3/main_axi_gpio_0_3.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_axi_gpio_0_3 || ORIG_REF_NAME==main_axi_gpio_0_3} -quiet] -quiet
 
@@ -50,6 +47,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_axi_gpio_0
 
 # IP: bd/main/ip/main_axi_gpio_0_6/main_axi_gpio_0_6.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_axi_gpio_0_6 || ORIG_REF_NAME==main_axi_gpio_0_6} -quiet] -quiet
+
+# IP: bd/main/ip/main_PUFART_0_0/main_PUFART_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_PUFART_0_0 || ORIG_REF_NAME==main_PUFART_0_0} -quiet] -quiet
+
+# IP: bd/main/ip/main_axi_gpio_0_7/main_axi_gpio_0_7.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_axi_gpio_0_7 || ORIG_REF_NAME==main_axi_gpio_0_7} -quiet] -quiet
 
 # IP: bd/main/ip/main_auto_pc_0/main_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_auto_pc_0 || ORIG_REF_NAME==main_auto_pc_0} -quiet] -quiet

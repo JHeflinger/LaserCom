@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="main" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1715932696"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1715932696"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1715932696"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1715932696"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1715963838"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1715963838"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1715963838"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1715963838"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/main_processing_system7_0_0/main_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -98,14 +98,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/main_PUFART_0_0/main_PUFART_0_0.xci" Type="IP">
-        <Instance HierarchyPath="PUFART_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/main_axi_gpio_0_3/main_axi_gpio_0_3.xci" Type="IP">
         <Instance HierarchyPath="PUFART_READ"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -132,6 +124,22 @@
       </File>
       <File Name="ip/main_axi_gpio_0_6/main_axi_gpio_0_6.xci" Type="IP">
         <Instance HierarchyPath="TEST_IN"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/main_PUFART_0_0/main_PUFART_0_0.xci" Type="IP">
+        <Instance HierarchyPath="PUFART_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/main_axi_gpio_0_7/main_axi_gpio_0_7.xci" Type="IP">
+        <Instance HierarchyPath="THRESHOLDS"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

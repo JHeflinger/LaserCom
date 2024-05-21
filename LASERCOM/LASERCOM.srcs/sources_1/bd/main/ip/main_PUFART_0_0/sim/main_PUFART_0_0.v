@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:PUFART:1.0
-// IP Revision: 12
+// IP Revision: 2
 
 `timescale 1ns/1ps
 
@@ -57,6 +57,7 @@
 module main_PUFART_0_0 (
   data,
   read,
+  thresholds,
   buffer,
   ready,
   clk,
@@ -65,6 +66,7 @@ module main_PUFART_0_0 (
 
 input wire [5 : 0] data;
 input wire read;
+input wire [29 : 0] thresholds;
 output wire [31 : 0] buffer;
 output wire ready;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN main_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -76,15 +78,11 @@ input wire rst;
 
   PUFART #(
     .PREWAIT(20'H0004B),
-    .WAIT(20'H00064),
-    .THRESHOLD_0(6'B000110),
-    .THRESHOLD_1(6'B001010),
-    .THRESHOLD_2(6'B010110),
-    .THRESHOLD_3(6'B100110),
-    .THRESHOLD_4(6'B110010)
+    .WAIT(20'H00064)
   ) inst (
     .data(data),
     .read(read),
+    .thresholds(thresholds),
     .buffer(buffer),
     .ready(ready),
     .clk(clk),

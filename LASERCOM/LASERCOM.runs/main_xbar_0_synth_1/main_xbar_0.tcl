@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z020clg400-1
@@ -33,9 +34,9 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.2 [current_project]
 set_property ip_repo_paths {
   /home/jason/Dev/LaserCom/DAC
-  /home/jason/Dev/LaserCom/PUFART
   /home/jason/Dev/LaserCom/ADCCLK
   /home/jason/Dev/LaserCom/PUART
+  /home/jason/Dev/LaserCom/PUFART
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/jason/Dev/LaserCom/LASERCOM/LASERCOM.cache/ip [current_project]

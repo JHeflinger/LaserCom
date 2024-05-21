@@ -83,7 +83,7 @@
   "../../../bd/main/ip/main_PUART_0_0/sim/main_PUART_0_0.v" \
   "../../../bd/main/ipshared/7c6d/ADCCLK.v" \
   "../../../bd/main/ip/main_ADCCLK_0_0/sim/main_ADCCLK_0_0.v" \
-  "../../../bd/main/ipshared/e97a/PUFART.v" \
+  "../../../bd/main/ipshared/1df2/PUFART.v" \
   "../../../bd/main/ip/main_PUFART_0_0/sim/main_PUFART_0_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

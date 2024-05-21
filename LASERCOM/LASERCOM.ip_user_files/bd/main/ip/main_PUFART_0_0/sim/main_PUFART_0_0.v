@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:PUFART:1.0
-// IP Revision: 12
+// IP Revision: 14
 
 `timescale 1ns/1ps
 

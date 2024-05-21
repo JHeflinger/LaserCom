@@ -12,7 +12,7 @@ set_property PACKAGE_PIN Y7 [get_ports {DAC[2]}]
 set_property PACKAGE_PIN V6 [get_ports {DAC[0]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports ADC_CLK]
-set_property PACKAGE_PIN W6 [get_ports ADC_CLK]
+set_property PACKAGE_PIN R14 [get_ports ADC_CLK]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {DATA_IN[5]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DATA_IN[4]}]
@@ -26,3 +26,4 @@ set_property PACKAGE_PIN T11 [get_ports {DATA_IN[3]}]
 set_property PACKAGE_PIN W14 [get_ports {DATA_IN[2]}]
 set_property PACKAGE_PIN Y14 [get_ports {DATA_IN[1]}]
 set_property PACKAGE_PIN T12 [get_ports {DATA_IN[0]}]
+

@@ -6,8 +6,17 @@
 #define DATACHANNEL 1
 #define DATADIRECTION_IN 0xffffffff
 #define DATADIRECTION_OUT 0x00000000
+#define THRES_0 10
+#define THRES_1 10
+#define THRES_2 23
+#define THRES_3 41
+#define THRES_4 56
 
-XGpio tx_full, tx_send, tx_data, pf_read, pf_ready, pf_data, test_in;
+XGpio tx_full, tx_send, tx_data, pf_read, pf_ready, pf_data, test_in, thresholds;
+
+u32 get_raw_adc() {
+	return XGpio_DiscreteRead(&test_in, DATACHANNEL);
+}
 
 void send_packet(u32 data) {
 	while(XGpio_DiscreteRead(&tx_full, DATACHANNEL) == 1) {};
@@ -17,7 +26,8 @@ void send_packet(u32 data) {
 }
 
 void get_packet(u32* data) {
-	while(XGpio_DiscreteRead(&pf_ready, DATACHANNEL) == 0) {};
+	//while(XGpio_DiscreteRead(&pf_ready, DATACHANNEL) == 0) {};
+	if (XGpio_DiscreteRead(&pf_ready, DATACHANNEL) == 0) return;
 	*data = XGpio_DiscreteRead(&pf_data, DATACHANNEL);
 	XGpio_DiscreteWrite(&pf_read, DATACHANNEL, 1);
 	XGpio_DiscreteWrite(&pf_read, DATACHANNEL, 0);
@@ -47,6 +57,21 @@ int init(void) {
 	XGpio_Initialize(&test_in, XPAR_TEST_IN_DEVICE_ID);
 	XGpio_SetDataDirection(&test_in, DATACHANNEL, DATADIRECTION_IN);
 
+	XGpio_Initialize(&thresholds, XPAR_THRESHOLDS_DEVICE_ID);
+	XGpio_SetDataDirection(&thresholds, DATACHANNEL, DATADIRECTION_OUT);
+	u32 thres = 0;
+	thres |= THRES_4;
+	thres = thres << 6;
+	thres |= THRES_3;
+	thres = thres << 6;
+	thres |= THRES_2;
+	thres = thres << 6;
+	thres |= THRES_1;
+	thres = thres << 6;
+	thres |= THRES_0;
+
+	XGpio_DiscreteWrite(&thresholds, DATACHANNEL, thres);
+
 	PRINT("-- Finished initialization -- \r\n");
 	return 0;
 }
@@ -55,12 +80,17 @@ void loop(void) {
 	int count = 0;
 	while(1) {
 		u32 data = count == 0 ? 0x424F4F42 : 0xF0F0F0F0;
+		u32 data1;
+		u32 data2;
 		count++;
 		if (count > 1) count = 0;
 		send_packet(data);
-		PRINT("sent data %d\r\n", (int)data);
-		get_packet(&data);
-		PRINT("got data %d\r\n", (int)data);
+		get_packet(&data1);
+		data2 = get_raw_adc();
+		PRINT("adc data: %d | ", (int)data2);
+		PRINT("sent data %d | ", (int)data);
+		PRINT("got data %d | \r\n", (int)data1);
+
 	}
 }
 
